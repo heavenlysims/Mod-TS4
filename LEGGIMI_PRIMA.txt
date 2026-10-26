@@ -1,0 +1,30 @@
+CELY MOD CHECKER — PROGETTO PER OTTENERE IL FILE EXE SU WINDOWS 11
+
+IMPORTANTE
+Questo ZIP contiene il progetto e una compilazione automatica tramite GitHub Actions. Non contiene ancora un EXE già compilato: in questo ambiente non posso collaudare né generare direttamente un eseguibile Windows. Il computer dell'utente NON deve installare Python.
+
+COME OTTENERE L'EXE (serve un account GitHub gratuito)
+1. Vai su https://github.com/new e crea un repository nuovo, per esempio "cely-mod-checker". Impostalo Public oppure Private.
+2. Estrai questo ZIP sul PC.
+3. Nella pagina del repository su GitHub, scegli "Add file" > "Upload files" e carica TUTTI i file e le cartelle contenuti nello ZIP estratto, inclusa la cartella nascosta ".github". Fai attenzione che ".github/workflows/build-windows.yml" mantenga esattamente questo percorso. Premi "Commit changes".
+4. Apri la scheda "Actions", scegli "Build Cely Mod Checker for Windows", poi "Run workflow" se non è già partito. Attendi che la compilazione finisca.
+5. Apri l'esecuzione completata e scarica l'artefatto "Cely-Mod-Checker-Windows11". Estrai lo ZIP scaricato: dentro troverai Cely_Mod_Checker.exe. Poi fai doppio clic per avviarlo.
+
+NESSUN PYTHON DA INSTALLARE SUL TUO PC
+Python viene usato solo temporaneamente dai computer di compilazione di GitHub Actions per costruire l'EXE.
+
+FUNZIONI
+- Seleziona la cartella Mods.
+- Controlla online i file .package e .ts4script confrontando i nomi con la pagina pubblica Sims4Life Mod Status.
+- Seleziona una riga e premi "Apri pagina aggiornamento" per aprire il link trovato dalla fonte.
+- Esporta un report CSV.
+- Non modifica, elimina o carica online i file della cartella Mods.
+
+LIMITI IMPORTANTI
+- La lettura automatica della pagina Sims4Life può smettere di funzionare se la pagina cambia struttura o blocca le richieste. Il parsing non è stato verificato contro l'HTML corrente.
+- Il confronto tra nomi di file e nomi pubblicati è approssimativo: una mod può non essere riconosciuta.
+- "Non trovata" o "non verificata" NON significa obsoleta.
+- Il link aperto è quello trovato nella fonte, se disponibile; non è garantito che sia sempre la pagina diretta del creatore o il download più recente.
+- Non scarica né installa aggiornamenti automaticamente.
+
+Fonte preconfigurata: https://sims4life.gg/sims-4-mod-status/
